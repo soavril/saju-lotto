@@ -25,7 +25,7 @@ export default function Footer() {
           >
             ⚠️ 본 서비스는 <strong>오락 목적</strong>으로만 제공됩니다.
             <br />
-            로또 당첨 확률을 높이거나 결과를 예측하지 않습니다.
+            복권 구매는 개인의 선택이며, 과도한 구매는 지양해 주세요.
           </p>
         </div>
       </div>

@@ -1,61 +1,122 @@
 /**
  * 각 세트의 "기운" 라벨과 설명
  * 확률이나 예측 관련 문구 절대 사용 금지!
+ * 3파트 구조: 이번 주 흐름 / 포인트 / 키워드
  */
+
+export interface VibeReading {
+  flow: string; // 이번 주 흐름
+  point: string; // 포인트
+  keywords: string[]; // 키워드 (3개)
+}
 
 export interface VibeData {
   labelKo: string;
-  labelEn: string;
-  descriptions: string[];
+  readings: VibeReading[];
 }
 
 /**
- * 5가지 기운 타입
+ * 5가지 기운 타입 - 3파트 구조화된 리딩
  */
 export const VIBES: VibeData[] = [
   {
     labelKo: "안정의 기운",
-    labelEn: "Steady Energy",
-    descriptions: [
-      "이번 주는 차분하고 안정적인 에너지가 느껴집니다.",
-      "균형 잡힌 기운이 함께하는 한 주입니다.",
-      "평온한 흐름 속에서 좋은 기운을 담았습니다.",
+    readings: [
+      {
+        flow: "고요한 에너지가 중심을 잡아주는 한 주",
+        point: "급하게 움직이기보다 흐름을 지켜보는 여유",
+        keywords: ["평온", "균형", "신중"],
+      },
+      {
+        flow: "차분한 리듬 속에서 내면의 힘이 느껴지는 시기",
+        point: "작은 것에 집중할 때 큰 그림이 보이는 순간",
+        keywords: ["안정", "집중", "내면"],
+      },
+      {
+        flow: "흔들림 없이 꾸준히 나아가는 기운이 감도는 주",
+        point: "조급함보다 묵묵함이 어울리는 타이밍",
+        keywords: ["꾸준함", "기반", "차분"],
+      },
     ],
   },
   {
     labelKo: "대담한 반전",
-    labelEn: "Bold Twist",
-    descriptions: [
-      "예상치 못한 재미가 기다리고 있을지도 몰라요.",
-      "과감한 변화의 기운을 담아봤습니다.",
-      "새로운 시도가 어울리는 에너지입니다.",
+    readings: [
+      {
+        flow: "예상 밖의 전개가 재미를 더하는 한 주",
+        point: "익숙한 패턴에서 살짝 벗어나 보는 시도",
+        keywords: ["반전", "도전", "새로움"],
+      },
+      {
+        flow: "평소와 다른 선택이 색다른 경험을 만드는 시기",
+        point: "고정관념을 내려놓을 때 보이는 가능성",
+        keywords: ["변화", "용기", "돌파"],
+      },
+      {
+        flow: "작은 모험이 큰 이야기가 되는 기운의 주",
+        point: "두려움보다 호기심이 앞설 때의 즐거움",
+        keywords: ["모험", "직감", "전환"],
+      },
     ],
   },
   {
     labelKo: "부드러운 흐름",
-    labelEn: "Gentle Flow",
-    descriptions: [
-      "자연스럽게 흘러가는 기운을 담았습니다.",
-      "편안하고 순탄한 에너지가 느껴지네요.",
-      "물 흐르듯 부드러운 한 주의 기운입니다.",
+    readings: [
+      {
+        flow: "물 흐르듯 자연스럽게 펼쳐지는 한 주",
+        point: "억지로 밀어붙이기보다 순리를 따르는 선택",
+        keywords: ["유연", "순응", "자연"],
+      },
+      {
+        flow: "편안한 리듬 속에서 좋은 기운이 스며드는 시기",
+        point: "긴장을 풀고 있는 그대로를 받아들이는 자세",
+        keywords: ["편안", "수용", "흐름"],
+      },
+      {
+        flow: "부드러운 에너지가 주변을 감싸는 기운의 주",
+        point: "힘을 빼고 가볍게 임할 때 느껴지는 여유",
+        keywords: ["온화", "여유", "조화"],
+      },
     ],
   },
   {
     labelKo: "숨겨진 불꽃",
-    labelEn: "Hidden Spark",
-    descriptions: [
-      "내면에 숨겨진 열정의 기운을 담았습니다.",
-      "조용하지만 강한 에너지가 느껴집니다.",
-      "잔잔한 표면 아래 특별한 기운이 있어요.",
+    readings: [
+      {
+        flow: "겉으로 드러나지 않는 열정이 피어오르는 한 주",
+        point: "조용히 준비한 것들이 빛을 발하는 순간",
+        keywords: ["열정", "내면", "잠재력"],
+      },
+      {
+        flow: "잔잔해 보이지만 속에서 뜨거운 에너지가 느껴지는 시기",
+        point: "표현하지 않아도 알 수 있는 강한 의지",
+        keywords: ["불꽃", "의지", "심층"],
+      },
+      {
+        flow: "보이지 않는 곳에서 특별한 기운이 움직이는 주",
+        point: "겉모습에 속지 않고 본질을 보는 눈",
+        keywords: ["반전", "깊이", "직감"],
+      },
     ],
   },
   {
     labelKo: "자유로운 기운",
-    labelEn: "Free Spirit",
-    descriptions: [
-      "어떤 일이든 일어날 수 있는 재미있는 기운입니다.",
-      "즐거운 서프라이즈의 에너지를 담았어요.",
-      "틀에 박히지 않은 자유로운 기운이네요.",
+    readings: [
+      {
+        flow: "틀에 얽매이지 않는 에너지가 넘치는 한 주",
+        point: "정해진 답 없이 자유롭게 즐기는 마음가짐",
+        keywords: ["자유", "개방", "즐거움"],
+      },
+      {
+        flow: "어디로 튈지 모르는 재미가 가득한 시기",
+        point: "계획보다 즉흥이 어울리는 순간의 매력",
+        keywords: ["즉흥", "다양", "유쾌"],
+      },
+      {
+        flow: "예측 불가능한 재미가 기다리는 기운의 주",
+        point: "결과보다 과정 자체를 즐기는 여유로움",
+        keywords: ["모험", "기대", "설렘"],
+      },
     ],
   },
 ];
@@ -66,15 +127,22 @@ export const VIBES: VibeData[] = [
 export function getVibeForSet(
   setIndex: number,
   seed: number
-): { label: string; labelEn: string; description: string } {
+): {
+  label: string;
+  flow: string;
+  point: string;
+  keywords: string[];
+} {
   const vibeIndex = (setIndex + seed) % VIBES.length;
   const vibe = VIBES[vibeIndex];
-  const descIndex = (seed + setIndex * 7) % vibe.descriptions.length;
+  const readingIndex = (seed + setIndex * 7) % vibe.readings.length;
+  const reading = vibe.readings[readingIndex];
 
   return {
     label: vibe.labelKo,
-    labelEn: vibe.labelEn,
-    description: vibe.descriptions[descIndex],
+    flow: reading.flow,
+    point: reading.point,
+    keywords: reading.keywords,
   };
 }
 

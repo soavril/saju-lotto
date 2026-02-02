@@ -19,8 +19,9 @@ export interface GeneratorInput {
 export interface LottoSet {
   numbers: number[];
   label: string;
-  labelEn: string;
-  description: string;
+  flow: string;
+  point: string;
+  keywords: string[];
 }
 
 /**
@@ -136,8 +137,9 @@ export function generateLottoSets(input: GeneratorInput): GeneratorResult {
     sets.push({
       numbers,
       label: vibe.label,
-      labelEn: vibe.labelEn,
-      description: vibe.description,
+      flow: vibe.flow,
+      point: vibe.point,
+      keywords: vibe.keywords,
     });
   }
 
@@ -152,14 +154,15 @@ export function generateLottoSets(input: GeneratorInput): GeneratorResult {
  * 결과를 공유용 텍스트로 변환
  */
 export function formatResultsForShare(result: GeneratorResult): string {
-  let text = `🍀 이번 주 사주 로또 번호 (${result.weekString})\n\n`;
+  let text = `🍀 ${result.weekString} 사주 번호\n\n`;
 
   result.sets.forEach((set, index) => {
     text += `${index + 1}. ${set.label}\n`;
-    text += `   ${set.numbers.map((n) => n.toString().padStart(2, "0")).join("  ")}\n\n`;
+    text += `   ${set.numbers.map((n) => n.toString().padStart(2, "0")).join("  ")}\n`;
+    text += `   #${set.keywords.join(" #")}\n\n`;
   });
 
-  text += `⚠️ 재미로만 즐겨주세요! 당첨을 보장하지 않습니다.\n`;
+  text += `⚠️ 오락 목적으로만 즐겨주세요.\n`;
   text += `🔗 https://saju-number.com`;
 
   return text;

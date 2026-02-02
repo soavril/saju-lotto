@@ -81,22 +81,22 @@ export default function Home() {
             marginBottom: "var(--space-md)",
           }}
         >
-          <span style={{ color: "var(--color-primary)" }}>사주</span>로 뽑는
+          <span style={{ color: "var(--color-primary)" }}>사주</span> 기반
           <br />
-          이번 주 로또 번호
+          오락용 번호 생성기
         </h1>
         <p
           style={{
             fontSize: "var(--font-lg)",
             color: "var(--color-text-light)",
-            maxWidth: "400px",
+            maxWidth: "420px",
             margin: "0 auto",
             lineHeight: 1.7,
           }}
         >
-          생년월일을 입력하고
+          생년월일과 이번 주 테마를 조합해
           <br />
-          나만의 행운 번호를 뽑아보세요!
+          재미로 즐기는 번호 5세트를 만들어 드려요
         </p>
 
         {/* 면책 배지 */}
@@ -111,7 +111,7 @@ export default function Home() {
             color: "#92400e",
           }}
         >
-          🎮 재미로만 즐겨주세요
+          🎮 오락 목적 전용
         </div>
       </section>
 
@@ -185,9 +185,9 @@ export default function Home() {
               }}
             >
               <p style={{ margin: 0, fontSize: "var(--font-sm)" }}>
-                ⚠️ 이 번호는 오락 목적으로만 제공됩니다.
+                ⚠️ 본 서비스는 오락용이며 당첨을 보장하지 않습니다.
                 <br />
-                실제 당첨과는 관련이 없으며, 책임감 있는 복권 구매를 권장합니다.
+                복권 구매는 개인의 선택이며, 과도한 구매는 지양해 주세요.
               </p>
             </div>
           </section>

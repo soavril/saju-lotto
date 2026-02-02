@@ -42,7 +42,7 @@ export default async function Image() {
             textAlign: "center",
           }}
         >
-          사주 로또 번호 생성기
+          사주 번호 생성기
         </div>
         <div
           style={{
@@ -51,7 +51,7 @@ export default async function Image() {
             textAlign: "center",
           }}
         >
-          생년월일로 뽑는 이번 주 행운 번호
+          생년월일 기반 오락용 번호 5세트
         </div>
         <div
           style={{
@@ -62,7 +62,7 @@ export default async function Image() {
             borderRadius: 12,
           }}
         >
-          재미로만 즐겨주세요
+          오락 목적 전용
         </div>
       </div>
     ),
