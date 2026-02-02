@@ -31,8 +31,8 @@ export function getISOWeekYear(date: Date): number {
 }
 
 /**
- * 현재 주차 정보를 문자열로 반환합니다.
- * 예: "2026-W05"
+ * 현재 주차 정보를 한국어 문자열로 반환합니다.
+ * 예: "2월 첫째주"
  */
 export function getCurrentWeekString(timezone: string = "Asia/Seoul"): string {
   // 한국 시간 기준으로 현재 날짜 계산
@@ -41,10 +41,15 @@ export function getCurrentWeekString(timezone: string = "Asia/Seoul"): string {
     now.toLocaleString("en-US", { timeZone: timezone })
   );
 
-  const year = getISOWeekYear(koreaTime);
-  const week = getISOWeekNumber(koreaTime);
+  const month = koreaTime.getMonth() + 1; // 0-indexed
+  const date = koreaTime.getDate();
 
-  return `${year}-W${week.toString().padStart(2, "0")}`;
+  // 해당 월의 몇째주인지 계산
+  const weekOfMonth = Math.ceil(date / 7);
+
+  const weekNames = ["", "첫째주", "둘째주", "셋째주", "넷째주", "다섯째주"];
+
+  return `${month}월 ${weekNames[weekOfMonth]}`;
 }
 
 /**

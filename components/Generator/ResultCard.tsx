@@ -18,44 +18,28 @@ export default function ResultCard({ set, index }: ResultCardProps) {
       {/* 세트 헤더 */}
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
           marginBottom: "var(--space-md)",
         }}
       >
-        <div>
-          <span
-            style={{
-              fontSize: "var(--font-sm)",
-              color: "var(--color-text-muted)",
-              display: "block",
-            }}
-          >
-            {index + 1}번째 세트
-          </span>
-          <h3
-            style={{
-              fontSize: "var(--font-xl)",
-              fontWeight: 700,
-              color: "var(--color-primary)",
-              margin: "4px 0 0 0",
-            }}
-          >
-            {set.label}
-          </h3>
-        </div>
         <span
           style={{
-            fontSize: "12px",
+            fontSize: "var(--font-sm)",
             color: "var(--color-text-muted)",
-            background: "var(--color-bg-card)",
-            padding: "4px 8px",
-            borderRadius: "var(--radius-sm)",
+            display: "block",
           }}
         >
-          {set.labelEn}
+          {index + 1}번째 세트
         </span>
+        <h3
+          style={{
+            fontSize: "var(--font-xl)",
+            fontWeight: 700,
+            color: "var(--color-primary)",
+            margin: "4px 0 0 0",
+          }}
+        >
+          {set.label}
+        </h3>
       </div>
 
       {/* 번호 표시 - 크고 명확하게 */}
