@@ -15,7 +15,7 @@ export interface VibeData {
 export const VIBES: VibeData[] = [
   {
     labelKo: "안정의 기운",
-    labelEn: "Steady Luck",
+    labelEn: "Steady Energy",
     descriptions: [
       "이번 주는 차분하고 안정적인 에너지가 느껴집니다.",
       "균형 잡힌 기운이 함께하는 한 주입니다.",
@@ -50,8 +50,8 @@ export const VIBES: VibeData[] = [
     ],
   },
   {
-    labelKo: "예측불허",
-    labelEn: "Wild Card",
+    labelKo: "자유로운 기운",
+    labelEn: "Free Spirit",
     descriptions: [
       "어떤 일이든 일어날 수 있는 재미있는 기운입니다.",
       "즐거운 서프라이즈의 에너지를 담았어요.",

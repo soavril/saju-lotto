@@ -37,20 +37,11 @@ export const metadata: Metadata = {
     title: "사주 로또 번호 생성기 - 이번 주 나만의 행운 번호",
     description:
       "생년월일 기반으로 이번 주 나만의 로또 번호를 뽑아보세요. 재미로 즐기는 번호 생성기!",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "사주 로또 번호 생성기",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "사주 로또 번호 생성기",
     description: "생년월일로 이번 주 행운 번호를 뽑아보세요!",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -63,9 +54,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "추후_구글_인증_코드_입력",
-  },
 };
 
 export default function RootLayout({
@@ -77,7 +65,6 @@ export default function RootLayout({
     <html lang="ko" className={notoSansKR.variable}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#1a56db" />
       </head>
       <body className={notoSansKR.className}>
