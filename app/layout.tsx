@@ -13,11 +13,11 @@ const notoSansKR = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   title: {
-    default: "사주 번호 생성기 - 생년월일 기반 오락용 로또 번호",
-    template: "%s | 사주 번호",
+    default: "사주 행운 번호 생성기 - 생년월일 기반 로또 번호",
+    template: "%s | 사주 행운 번호",
   },
   description:
-    "생년월일과 이번 주 테마를 조합해 오락용 로또 번호 5세트를 생성합니다. 재미로 즐기는 무료 번호 생성기입니다.",
+    "생년월일과 이번 주 테마를 조합해 나만의 행운 번호 5세트를 생성합니다. 재미로 즐기는 무료 번호 생성기입니다.",
   keywords: ["로또", "사주", "번호 생성기", "행운 번호", "로또 번호", "무료"],
   authors: [{ name: "사주로또" }],
   creator: "사주로또",
@@ -33,15 +33,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     url: "https://saju-number.com",
-    siteName: "사주 번호 생성기",
-    title: "사주 번호 생성기 - 생년월일 기반 오락용 로또 번호",
+    siteName: "사주 행운 번호",
+    title: "사주 행운 번호 생성기 - 생년월일 기반 로또 번호",
     description:
-      "생년월일과 이번 주 테마를 조합해 재미로 즐기는 번호 5세트를 만들어 드려요.",
+      "생년월일과 이번 주 테마를 조합해 나만의 행운 번호 5세트를 만들어 드려요.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "사주 번호 생성기",
-    description: "생년월일 기반 오락용 로또 번호 생성기",
+    title: "사주 행운 번호 생성기",
+    description: "생년월일 기반 행운 번호 생성기",
   },
   robots: {
     index: true,
