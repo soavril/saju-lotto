@@ -41,7 +41,7 @@ export default function ShareBlock({ result }: ShareBlockProps) {
         await navigator.share({
           title: "사주 로또 번호",
           text: text,
-          url: "https://saju-lotto.vercel.app",
+          url: "https://saju-number.com",
         });
       } catch {
         // 사용자가 공유 취소

@@ -160,7 +160,7 @@ export function formatResultsForShare(result: GeneratorResult): string {
   });
 
   text += `⚠️ 재미로만 즐겨주세요! 당첨을 보장하지 않습니다.\n`;
-  text += `🔗 https://saju-lotto.vercel.app`;
+  text += `🔗 https://saju-number.com`;
 
   return text;
 }

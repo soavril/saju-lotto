@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  metadataBase: new URL("https://saju-lotto.vercel.app"),
+  metadataBase: new URL("https://saju-number.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://saju-lotto.vercel.app",
+    url: "https://saju-number.com",
     siteName: "사주 로또 번호 생성기",
     title: "사주 로또 번호 생성기 - 이번 주 나만의 행운 번호",
     description:
