@@ -66,6 +66,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#1a56db" />
+        {/* Naver Search Advisor 인증 */}
+        <meta name="naver-site-verification" content="5c9fbcfa01b4e2addfeb83a20c4e6cc9dfb3833a" />
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5547434174125750"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={notoSansKR.className}>
         <Header />
